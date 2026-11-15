@@ -1,0 +1,9 @@
+{
+  // Site da Pertto: Worker só com arquivos estáticos (HTML puro)
+  "name": "pertto-site",
+  "compatibility_date": "2026-11-15",
+  "assets": {
+    "directory": "./public/",
+    "not_found_handling": "404-page"
+  }
+}

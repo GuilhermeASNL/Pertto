@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Os valores da Pertto Consultoria em Planos de Saúde e Benefícios e como eles aparecem no cuidado com cada cliente.">
+<title>Nossos valores | Pertto Consultoria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Valores: herói laranja com a frase do time, seis valores com o que cada um significa na prática, chamada e contato.
+   Base: mesma identidade da página inicial. Herói com promessa, atalhos para as 4 frentes, blocos por frente (texto à esquerda, cartões à direita), tabela por porte, extras, faixa laranja de chamada e contato. */
+:root{
+  --bg:#ECEEF0; --surface:#F6F7F8; --card:#FFFFFF; --line:#D5D9DE;
+  --ink:#16181B; --muted:#565D66;
+  --orange:#F7931E; --purple:#6D2BD8; --purple-ink:#5B21B6;
+  --display:'Poppins','Segoe UI',system-ui,sans-serif;
+  --body:'Inter','Segoe UI',system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:64px}
+.band.white{background:var(--surface)}
+.band.orange{background:var(--orange)}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+h1{font-weight:800;font-size:clamp(2.2rem,5.2vw,3.8rem);line-height:1.06;letter-spacing:-.02em}
+h2{font-weight:800;font-size:clamp(1.7rem,3.4vw,2.4rem);line-height:1.12;letter-spacing:-.015em}
+h3{font-weight:700;font-size:1.08rem;line-height:1.3}
+p{margin:0}
+.pk{color:var(--purple-ink)}
+.eyebrow{font-family:var(--display);font-weight:600;font-size:.8rem;letter-spacing:.09em;text-transform:uppercase;color:var(--purple-ink)}
+.lead{font-size:1.1rem;color:var(--muted);max-width:60ch}
+.head{display:grid;gap:12px;margin-bottom:32px}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:20px}
+.brand{display:flex;align-items:baseline;gap:12px;text-decoration:none}
+.brand b{font-family:var(--display);font-weight:800;font-size:1.6rem;letter-spacing:-.02em}
+.brand b i{font-style:normal;color:var(--orange)}
+.brand span{font-size:.8rem;color:var(--muted)}
+nav{display:flex;align-items:center;gap:22px;font-size:.92rem;font-weight:500}
+nav a{text-decoration:none}
+nav a:hover,nav a[aria-current]{color:var(--purple-ink)}
+nav a[aria-current]{font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--display);font-weight:700;font-size:.98rem;text-decoration:none;padding:13px 22px;border-radius:12px;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.btn.pri{background:var(--purple);color:#fff}
+.btn.pri:hover{background:var(--purple-ink);transform:translateY(-1px)}
+.btn.sec{background:transparent;border-color:var(--ink);color:var(--ink)}
+.btn.sec:hover{background:var(--ink);color:#fff}
+.btn.sm{padding:9px 16px;font-size:.88rem}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.dark:hover{background:#000}
+a:focus-visible,button:focus-visible{outline:3px solid var(--purple);outline-offset:3px;border-radius:6px}
+
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding-block:28px 64px}
+.hero .txt{display:grid;gap:22px;min-width:0}
+.tag{display:inline-block;background:var(--orange);color:var(--ink);font-family:var(--display);font-weight:700;font-size:.9rem;padding:7px 14px;border-radius:10px;justify-self:start}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.panel-box{position:relative;min-width:0}
+.panel{position:relative;z-index:1;background:var(--card);border-radius:24px;padding:28px 26px 12px;min-width:0}
+.panel-box::before{content:"";position:absolute;right:-14px;top:-26px;width:150px;height:72px;background-image:radial-gradient(circle,var(--purple) 6px,transparent 7px);background-size:26px 26px;z-index:0}
+.panel p.t{font-family:var(--display);font-weight:800;font-size:1.35rem;line-height:1.2;margin-bottom:14px}
+.panel ol{list-style:none;margin:0;padding:0;counter-reset:f}
+.panel li{border-top:1px solid var(--line);counter-increment:f}
+.panel li a{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:12px;padding:13px 2px;text-decoration:none;font-family:var(--display);font-weight:600}
+.panel li a::before{content:counter(f);width:34px;height:34px;border-radius:50%;background:var(--orange);display:grid;place-items:center;font-weight:800}
+.panel li a::after{content:"→";font-weight:700;color:var(--purple-ink)}
+.panel li a:hover{color:var(--purple-ink)}
+
+.front{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+.front > *{min-width:0}
+.front .head{margin:0;position:sticky;top:24px}
+.who-for{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:600;font-size:.85rem;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;justify-self:start}
+.white .who-for{background:var(--bg)}
+.num{font-family:var(--display);font-weight:800;font-size:.85rem;color:var(--ink);background:var(--orange);border-radius:999px;padding:2px 10px;margin-right:6px}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:var(--card);border-radius:18px;padding:22px;min-width:0;display:grid;gap:8px;align-content:start}
+.white .card{background:var(--card)}
+.card p{color:var(--muted);font-size:.94rem}
+.ico{width:44px;height:44px;border-radius:50%;background:var(--orange);display:grid;place-items:center;margin-bottom:4px}
+.ico svg{width:22px;height:22px;fill:none;stroke:var(--ink);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.card.wide{grid-column:1/-1}
+
+.tbl{overflow-x:auto;background:var(--card);border-radius:18px}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.95rem}
+th,td{padding:14px 18px;text-align:center;border-bottom:1px solid var(--line)}
+tr:last-child td,tr:last-child th{border-bottom:0}
+thead th{font-family:var(--display);font-weight:700;font-size:1rem;vertical-align:bottom}
+thead th small{display:block;font-family:var(--body);font-weight:500;color:var(--muted);font-size:.8rem}
+tbody th{text-align:left;font-weight:500}
+.y{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--orange);font-weight:700;font-size:.9rem}
+.n{color:#A9B0B8}
+
+.extras{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
+.call{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+.call > *{min-width:0}
+.call p{font-weight:600;margin-top:12px;max-width:52ch}
+.call .cta-row{justify-content:flex-end}
+.orange .eyebrow{color:var(--ink)}
+
+.contact{background:var(--card);border-radius:22px;padding:34px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.contact > *{min-width:0}
+.who-name{font-family:var(--display);font-weight:800;font-size:1.5rem}
+.tel{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:1.25rem;margin-top:10px}
+.copy{font-family:var(--body);font-size:.82rem;font-weight:600;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;color:var(--ink)}
+footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--purple-ink)}
+
+@media (max-width:900px){
+  nav a:not(.btn){display:none}
+  .brand span{display:none}
+  .hero,.front,.call{grid-template-columns:1fr;gap:28px}
+  .front .head{position:static}
+  .extras{grid-template-columns:1fr}
+  .call .cta-row{justify-content:flex-start}
+  .contact{grid-template-columns:1fr}
+  .band{padding-block:48px}
+  .panel-box::before{right:6px}
+  table{min-width:0;font-size:.88rem}
+  th,td{padding:12px 8px}
+  tbody th{padding-left:14px}
+  thead th{font-size:.85rem}
+  thead th small{font-size:.68rem}
+}
+@media (max-width:560px){.items{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn.pri:hover{transform:none}}
+
+.vhero{padding-block:56px 64px}
+.vhero .eyebrow{color:var(--ink)}
+.vhero h1{margin:14px 0 18px;max-width:18ch}
+.vhero p.lead{color:var(--ink);font-weight:500;max-width:56ch}
+.vgrid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:16px;counter-reset:v}
+.vgrid li{counter-increment:v;background:var(--card);border-radius:20px;padding:28px;display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:start;min-width:0}
+.vgrid li::before{content:counter(v,decimal-leading-zero);width:52px;height:52px;border-radius:50%;background:var(--orange);font-family:var(--display);font-weight:800;display:grid;place-items:center}
+.vgrid h2{font-size:clamp(1.15rem,2vw,1.35rem);line-height:1.25;margin-bottom:8px}
+.vgrid p{color:var(--muted)}
+@media (max-width:900px){.vgrid{grid-template-columns:1fr}.vgrid li{padding:22px;grid-template-columns:44px 1fr;gap:14px}.vgrid li::before{width:44px;height:44px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/"><b>Pertto<i>.</i></b><span>Consultoria em Planos de Saúde e Benefícios</span></a>
+    <nav>
+      <a href="/#servicos">Serviços</a>
+      <a href="/#diferenciais">Diferenciais</a>
+      <a href="/pos-venda">Pós-venda</a>
+      <a href="/#operadoras">Operadoras</a>
+      <a class="btn pri sm" href="https://calendly.com/pertto/faleconosco" target="_blank" rel="noopener">Agendar reunião</a>
+    </nav>
+  </header>
+
+</div>
+
+<section class="band orange vhero">
+  <div class="wrap">
+    <p class="eyebrow">Nossos valores</p>
+    <h1>Somos mais do que uma casa, somos um time.</h1>
+    <p class="lead">Valores bonitos na parede não protegem ninguém. O que vale é como eles aparecem quando você precisa de nós. Aqui está o que guia cada conversa, cada proposta e cada atendimento da Pertto.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <ol class="vgrid">
+      <li><div><h2>Fazemos diferente para fazer a diferença.</h2><p>Plano de saúde ainda é vendido como produto de prateleira. A gente prefere entender quem você quer proteger e como usa o plano antes de mostrar qualquer preço.</p></div></li>
+      <li><div><h2>Certo é certo. Não damos jeitinhos.</h2><p>Declaração de saúde preenchida com verdade, carências explicadas antes da assinatura e nada escondido em letra miúda. Um jeitinho hoje pode virar uma negativa de cobertura amanhã.</p></div></li>
+      <li><div><h2>Acreditamos no empoderamento por meio do conhecimento.</h2><p>Rede, carência, coparticipação e reajuste explicados em linguagem clara. Cliente que entende o que contratou decide melhor e usa melhor.</p></div></li>
+      <li><div><h2>Investimos na felicidade das pessoas.</h2><p>Por trás de cada contrato existe uma família ou uma equipe. Cuidar bem dessas pessoas é o que dá sentido ao nosso trabalho.</p></div></li>
+      <li><div><h2>Evoluímos com feedbacks.</h2><p>Elogio é bom, crítica é melhor ainda. Cada sugestão de cliente vira ajuste no nosso jeito de atender. Tem algo pra nos dizer? A conversa está aberta.</p></div></li>
+      <li><div><h2>Celebramos e crescemos juntos.</h2><p>Sua empresa contratou mais gente? Sua família aumentou? A gente comemora com você e ajusta o plano para acompanhar a nova fase.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band white">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <p class="eyebrow">Fale com a Pertto</p>
+        <p class="who-name">Guilherme Araújo</p>
+        <p style="color:var(--muted)">Diretor Comercial · Pertto Consultoria em Planos de Saúde e Benefícios</p>
+        <div class="tel"><span id="tel">(71) 93618-3604</span><button class="copy" id="copy" type="button">Copiar número</button></div>
+      </div>
+      <a class="btn pri" href="https://wa.me/5571936183604" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+    <footer>
+      <span>Pertto Consultoria em Planos de Saúde e Benefícios · Salvador, Bahia · <a href="/cookies">Política de Cookies</a></span>
+      <span>Menos tempo comparando, mais tempo cuidando.</span>
+    </footer>
+  </div>
+</section>
+
+<script>
+(function(){
+  var b=document.getElementById('copy'), t=document.getElementById('tel');
+  b.addEventListener('click',function(){
+    var done=function(){b.textContent='Número copiado';setTimeout(function(){b.textContent='Copiar número'},2000)};
+    var fallback=function(){var r=document.createRange();r.selectNodeContents(t);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selecionado'};
+    try{navigator.clipboard.writeText('(71) 93618-3604').then(done,fallback)}catch(e){fallback()}
+  });
+})();
+</script>
+</body>
+</html>

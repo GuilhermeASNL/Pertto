@@ -1,0 +1,45 @@
+SITE DA PERTTO - COMO PUBLICAR
+==============================
+
+Estrutura (não mude os nomes):
+
+pertto-site/
+  wrangler.jsonc      -> configuração (nome do site + página 404 ligada)
+  public/
+    index.html        -> página inicial
+    confirmacao.html  -> página de confirmação de reunião
+    404.html          -> página "sem cobertura"
+
+REGRA DE OURO: todo HTML do site fica dentro de "public". Cada publicação
+envia a pasta inteira, então nunca mais some arquivo.
+
+
+PRIMEIRA VEZ (uma vez só)
+-------------------------
+1. Instale o Node.js (versão LTS): https://nodejs.org
+2. Descompacte esta pasta onde quiser (ex.: Documentos/pertto-site).
+3. Abra o terminal DENTRO da pasta pertto-site:
+   - Windows: abra a pasta, clique na barra de endereço, digite "cmd" e Enter.
+   - Mac: botão direito na pasta > "Novo Terminal na Pasta".
+4. Rode:
+      npx wrangler login
+   O navegador abre. Entre na sua conta Cloudflare e autorize.
+
+
+PARA PUBLICAR (sempre que mudar algo)
+-------------------------------------
+1. Troque/adicione o HTML dentro de "public".
+2. No terminal, dentro da pasta pertto-site, rode:
+      npx wrangler deploy
+3. Teste:
+   https://perttoconsultoria.com.br
+   https://perttoconsultoria.com.br/confirmacao
+   https://perttoconsultoria.com.br/qualquer-coisa   (deve mostrar a 404)
+
+
+SE O TERMINAL PERGUNTAR ALGO
+----------------------------
+Na primeira publicação o Wrangler pode avisar que a configuração do painel
+é diferente da local e perguntar se quer continuar. Pode confirmar (y).
+Se depois disso o domínio perttoconsultoria.com.br parar de abrir o site,
+NÃO mexa em mais nada e chame o Claude com o erro que aparecer.
