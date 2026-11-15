@@ -130,6 +130,9 @@ footer a:hover{color:var(--purple-ink)}
 @media (max-width:560px){.items{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn.pri:hover{transform:none}}
 </style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
 
@@ -141,7 +144,7 @@ footer a:hover{color:var(--purple-ink)}
       <a href="/#diferenciais">Diferenciais</a>
       <a href="/pos-venda" aria-current="page">Pós-venda</a>
       <a href="/#operadoras">Operadoras</a>
-      <a class="btn pri sm" href="https://calendly.com/pertto/faleconosco" target="_blank" rel="noopener">Agendar reunião</a>
+      <a class="btn pri sm" href="https://calendly.com/pertto/faleconosco" target="_blank" rel="noopener" data-calendly>Agendar reunião</a>
     </nav>
   </header>
 
@@ -153,7 +156,7 @@ footer a:hover{color:var(--purple-ink)}
       <span class="tag">Um benefício gratuito para a sua empresa</span>
       <div class="cta-row">
         <a class="btn pri" href="https://wa.me/5571936183604?text=Ol%C3%A1%20Guilherme%2C%20quero%20saber%20mais%20sobre%20o%20p%C3%B3s-venda%20da%20Pertto%20para%20a%20minha%20empresa." target="_blank" rel="noopener">Quero esse pós-venda</a>
-        <a class="btn sec" href="https://calendly.com/pertto/faleconosco" target="_blank" rel="noopener">Agendar reunião</a>
+        <a class="btn sec" href="https://calendly.com/pertto/faleconosco" target="_blank" rel="noopener" data-calendly>Agendar reunião</a>
       </div>
     </div>
     <div class="panel-box"><div class="panel">
@@ -335,5 +338,6 @@ footer a:hover{color:var(--purple-ink)}
   });
 })();
 </script>
+<script src="/agenda.js" defer></script>
 </body>
 </html>

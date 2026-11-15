@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Pertto Consultoria em Planos de Saúde e Benefícios, em Salvador, Bahia. Planos de saúde, seguros e cartão benefício para você, sua família e sua empresa.">
-<title>Pertto Consultoria</title>
+<title>Pertto Consultoria em Planos de Saúde</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -214,6 +214,9 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem;display:flex;
 @media (max-width:520px){.grid4{grid-template-columns:1fr}.values{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn.pri:hover{transform:none}}
 </style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
 <div class="wrap">
@@ -438,14 +441,6 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem;display:flex;
     if(dlg.showModal) dlg.showModal(); else dlg.setAttribute('open','');
     if(ok()) show(); else setTimeout(fall,Math.max(0,3000-(Date.now()-t0)));
   });
-  // Botões do topo: pop-up do Calendly (widget de link). Sem o Calendly carregado, o link abre a agenda em nova aba.
-  Array.prototype.forEach.call(document.querySelectorAll('[data-calendly]'),function(a){
-    a.addEventListener('click',function(e){
-      if(window.Calendly && Calendly.initPopupWidget){ e.preventDefault(); Calendly.initPopupWidget({url:'https://calendly.com/pertto/faleconosco?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=6d2bd8',text:'Agende um horário comigo',color:'#6d2bd9',textColor:'#ffffff',branding:false}) }
-    });
-  });
-  // Selo flutuante do Calendly (canto da tela)
-  window.addEventListener('load',function(){ if(window.Calendly && Calendly.initBadgeWidget){ Calendly.initBadgeWidget({ url:'https://calendly.com/pertto/faleconosco?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=6d2bd8', text:'Abrir a agenda de horários', color:'#6d2bd8', textColor:'#ffffff', branding:false }); } });
   // Selo ZapSign: se a imagem não carregar, mostra o nome do selo como texto.
   var selo=document.getElementById('selo-zapsign'), seloTxt=document.getElementById('selo-texto');
   function seloFalhou(){ selo.hidden=true; seloTxt.hidden=false }
@@ -463,5 +458,6 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem;display:flex;
   });
 })();
 </script>
+<script src="/agenda.js" defer></script>
 </body>
 </html>
