@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Compare planos de saúde para a sua empresa em Salvador com a Pertto, sem compromisso. Concierge no WhatsApp antes e depois da contratação.">
+<meta name="robots" content="noindex">
+<title>Plano de saúde para empresas em Salvador | Pertto Consultoria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Valores: herói laranja com a frase do time, seis valores com o que cada um significa na prática, chamada e contato.
+   Base: mesma identidade da página inicial. Herói com promessa, atalhos para as 4 frentes, blocos por frente (texto à esquerda, cartões à direita), tabela por porte, extras, faixa laranja de chamada e contato. */
+:root{
+  --bg:#ECEEF0; --surface:#F6F7F8; --card:#FFFFFF; --line:#D5D9DE;
+  --ink:#16181B; --muted:#565D66;
+  --orange:#F7931E; --purple:#6D2BD8; --purple-ink:#5B21B6;
+  --display:'Poppins','Segoe UI',system-ui,sans-serif;
+  --body:'Inter','Segoe UI',system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:64px}
+.band.white{background:var(--surface)}
+.band.orange{background:var(--orange)}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+h1{font-weight:800;font-size:clamp(2.2rem,5.2vw,3.8rem);line-height:1.06;letter-spacing:-.02em}
+h2{font-weight:800;font-size:clamp(1.7rem,3.4vw,2.4rem);line-height:1.12;letter-spacing:-.015em}
+h3{font-weight:700;font-size:1.08rem;line-height:1.3}
+p{margin:0}
+.pk{color:var(--purple-ink)}
+.eyebrow{font-family:var(--display);font-weight:600;font-size:.8rem;letter-spacing:.09em;text-transform:uppercase;color:var(--purple-ink)}
+.lead{font-size:1.1rem;color:var(--muted);max-width:60ch}
+.head{display:grid;gap:12px;margin-bottom:32px}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:20px}
+.brand{display:flex;align-items:baseline;gap:12px;text-decoration:none}
+.brand b{font-family:var(--display);font-weight:800;font-size:1.6rem;letter-spacing:-.02em}
+.brand b i{font-style:normal;color:var(--orange)}
+.brand span{font-size:.8rem;color:var(--muted)}
+nav{display:flex;align-items:center;gap:22px;font-size:.92rem;font-weight:500}
+nav a{text-decoration:none}
+nav a:hover,nav a[aria-current]{color:var(--purple-ink)}
+nav a[aria-current]{font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--display);font-weight:700;font-size:.98rem;text-decoration:none;padding:13px 22px;border-radius:12px;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.btn.pri{background:var(--purple);color:#fff}
+.btn.pri:hover{background:var(--purple-ink);transform:translateY(-1px)}
+.btn.sec{background:transparent;border-color:var(--ink);color:var(--ink)}
+.btn.sec:hover{background:var(--ink);color:#fff}
+.btn.sm{padding:9px 16px;font-size:.88rem}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.dark:hover{background:#000}
+a:focus-visible,button:focus-visible{outline:3px solid var(--purple);outline-offset:3px;border-radius:6px}
+
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding-block:28px 64px}
+.hero .txt{display:grid;gap:22px;min-width:0}
+.tag{display:inline-block;background:var(--orange);color:var(--ink);font-family:var(--display);font-weight:700;font-size:.9rem;padding:7px 14px;border-radius:10px;justify-self:start}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.panel-box{position:relative;min-width:0}
+.panel{position:relative;z-index:1;background:var(--card);border-radius:24px;padding:28px 26px 12px;min-width:0}
+.panel-box::before{content:"";position:absolute;right:-14px;top:-26px;width:150px;height:72px;background-image:radial-gradient(circle,var(--purple) 6px,transparent 7px);background-size:26px 26px;z-index:0}
+.panel p.t{font-family:var(--display);font-weight:800;font-size:1.35rem;line-height:1.2;margin-bottom:14px}
+.panel ol{list-style:none;margin:0;padding:0;counter-reset:f}
+.panel li{border-top:1px solid var(--line);counter-increment:f}
+.panel li a{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:12px;padding:13px 2px;text-decoration:none;font-family:var(--display);font-weight:600}
+.panel li a::before{content:counter(f);width:34px;height:34px;border-radius:50%;background:var(--orange);display:grid;place-items:center;font-weight:800}
+.panel li a::after{content:"→";font-weight:700;color:var(--purple-ink)}
+.panel li a:hover{color:var(--purple-ink)}
+
+.front{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+.front > *{min-width:0}
+.front .head{margin:0;position:sticky;top:24px}
+.who-for{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:600;font-size:.85rem;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;justify-self:start}
+.white .who-for{background:var(--bg)}
+.num{font-family:var(--display);font-weight:800;font-size:.85rem;color:var(--ink);background:var(--orange);border-radius:999px;padding:2px 10px;margin-right:6px}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:var(--card);border-radius:18px;padding:22px;min-width:0;display:grid;gap:8px;align-content:start}
+.white .card{background:var(--card)}
+.card p{color:var(--muted);font-size:.94rem}
+.ico{width:44px;height:44px;border-radius:50%;background:var(--orange);display:grid;place-items:center;margin-bottom:4px}
+.ico svg{width:22px;height:22px;fill:none;stroke:var(--ink);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.card.wide{grid-column:1/-1}
+
+.tbl{overflow-x:auto;background:var(--card);border-radius:18px}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.95rem}
+th,td{padding:14px 18px;text-align:center;border-bottom:1px solid var(--line)}
+tr:last-child td,tr:last-child th{border-bottom:0}
+thead th{font-family:var(--display);font-weight:700;font-size:1rem;vertical-align:bottom}
+thead th small{display:block;font-family:var(--body);font-weight:500;color:var(--muted);font-size:.8rem}
+tbody th{text-align:left;font-weight:500}
+.y{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--orange);font-weight:700;font-size:.9rem}
+.n{color:#A9B0B8}
+
+.extras{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
+.call{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+.call > *{min-width:0}
+.call p{font-weight:600;margin-top:12px;max-width:52ch}
+.call .cta-row{justify-content:flex-end}
+.orange .eyebrow{color:var(--ink)}
+
+.contact{background:var(--card);border-radius:22px;padding:34px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.contact > *{min-width:0}
+.who-name{font-family:var(--display);font-weight:800;font-size:1.5rem}
+.tel{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:1.25rem;margin-top:10px}
+.copy{font-family:var(--body);font-size:.82rem;font-weight:600;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;color:var(--ink)}
+footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px}footer a{color:var(--muted)}footer a:hover{color:var(--purple-ink)}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--purple-ink)}
+
+@media (max-width:900px){
+  nav a:not(.btn){display:none}
+  .brand span{display:none}
+  .hero,.front,.call{grid-template-columns:1fr;gap:28px}
+  .front .head{position:static}
+  .extras{grid-template-columns:1fr}
+  .call .cta-row{justify-content:flex-start}
+  .contact{grid-template-columns:1fr}
+  .band{padding-block:48px}
+  .panel-box::before{right:6px}
+  table{min-width:0;font-size:.88rem}
+  th,td{padding:12px 8px}
+  tbody th{padding-left:14px}
+  thead th{font-size:.85rem}
+  thead th small{font-size:.68rem}
+}
+@media (max-width:560px){.items{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn.pri:hover{transform:none}}
+
+.vhero{padding-block:56px 64px}
+.vhero .eyebrow{color:var(--ink)}
+.vhero h1{margin:14px 0 18px;max-width:18ch}
+.vhero p.lead{color:var(--ink);font-weight:500;max-width:56ch}
+.vgrid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:16px;counter-reset:v}
+.vgrid li{counter-increment:v;background:var(--card);border-radius:20px;padding:28px;display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:start;min-width:0}
+.vgrid li::before{content:counter(v,decimal-leading-zero);width:52px;height:52px;border-radius:50%;background:var(--orange);font-family:var(--display);font-weight:800;display:grid;place-items:center}
+.vgrid h2{font-size:clamp(1.15rem,2vw,1.35rem);line-height:1.25;margin-bottom:8px}
+.vgrid p{color:var(--muted)}
+@media (max-width:900px){.vgrid{grid-template-columns:1fr}.vgrid li{padding:22px;grid-template-columns:44px 1fr;gap:14px}.vgrid li::before{width:44px;height:44px}}
+
+.pme-lead{padding-block:56px 64px}
+.pme-lead .eyebrow{color:var(--ink)}
+.pme-lead h1{margin:14px 0 18px;max-width:20ch}
+.pme-lead p.lead{color:var(--ink);font-weight:500;max-width:60ch}
+.pme-lead .cta-row{margin-top:24px}
+.pme-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.pme-grid h3{font-size:1.1rem}
+.pme-steps{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:p}
+.pme-steps li{counter-increment:p;background:var(--card);border-radius:18px;padding:22px;min-width:0}
+.pme-steps li::before{content:counter(p);display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--orange);font-family:var(--display);font-weight:800;margin-bottom:10px}
+.pme-steps h3{font-size:1.1rem;margin-bottom:6px}.pme-steps p{color:var(--muted);font-size:.94rem;margin:0}
+.faq{margin-top:24px;display:grid;gap:10px}
+.faq details{background:var(--card);border-radius:14px;padding:16px 20px}
+.faq summary{cursor:pointer;font-family:var(--display);font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-weight:800;color:var(--purple-ink)}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{color:var(--muted);margin:10px 0 0}
+.pme-ops{color:var(--muted);margin-top:14px;max-width:70ch}
+@media (max-width:900px){.pme-grid,.pme-steps{grid-template-columns:1fr}.pme-lead{padding-block:40px 48px}}
+
+.lp-hero{padding-block:36px 44px}
+.lp-hero .eyebrow{color:var(--ink)}
+.lp-hero h1{margin:12px 0 14px;font-size:clamp(2rem,8vw,3.4rem);max-width:16ch}
+.lp-hero p.lead{color:var(--ink);font-weight:500;max-width:52ch}
+.lp-hero .cta-row{margin-top:20px}
+.lp-hero .btn{min-height:52px}
+.lp-chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.lp-chips li{background:rgba(255,255,255,.75);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600}
+.lp-conc{display:grid;gap:14px;margin-top:22px;padding:0;list-style:none}
+.lp-conc li{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;background:var(--card);border-radius:16px;padding:16px}
+.lp-conc li::before{content:"\2713";display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--orange-soft);color:#8a4b00;font-weight:800}
+.lp-conc b{display:block;font-family:var(--display)}
+.lp-conc span{color:var(--muted);font-size:.94rem}
+.lp-final{background:var(--purple);color:#fff;border-radius:22px;padding:30px;display:grid;gap:14px;justify-items:start}
+.lp-final h2{color:#fff}
+.lp-final p{color:#fff;opacity:.92;max-width:52ch}
+.lp-final .btn{background:#fff;color:var(--purple-ink)}
+.lp-bar{display:none}
+@media (max-width:700px){
+  nav a:not(.btn){display:none}
+  .lp-hero .cta-row .btn{width:100%}
+  .lp-bar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:rgba(236,238,240,.96);border-top:1px solid var(--line)}
+  .lp-bar .btn{width:100%;min-height:50px}
+  body{padding-bottom:78px}
+}
+</style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/"><b>Pertto<i>.</i></b><span>Consultoria em Planos de Saúde</span></a>
+    <nav><a class="btn pri sm" href="https://wa.me/5571936183604?text=Ol%C3%A1!%20Vim%20pelo%20Google%20e%20quero%20comparar%20planos%20de%20sa%C3%BAde%20para%20a%20minha%20empresa." target="_blank" rel="noopener">WhatsApp</a></nav>
+  </header>
+
+</div>
+
+<section class="band orange lp-hero">
+  <div class="wrap">
+    <p class="eyebrow">Plano de saúde · Salvador, Bahia</p>
+    <h1>Plano de saúde para a sua empresa em Salvador</h1>
+    <p class="lead">Compare as operadoras com quem entende, sem compromisso. A Pertto explica rede, carência e coparticipação em linguagem clara e cuida do plano antes e depois da contratação.</p>
+    <div class="cta-row"><a class="btn dark" href="https://wa.me/5571936183604?text=Ol%C3%A1!%20Vim%20pelo%20Google%20e%20quero%20comparar%20planos%20de%20sa%C3%BAde%20para%20a%20minha%20empresa." target="_blank" rel="noopener">Falar no WhatsApp</a><a class="btn sec" href="https://calendly.com/pertto/faleconosco" target="_blank" rel="noopener" data-calendly>Agendar reunião</a></div>
+    <ul class="lp-chips"><li>Empresas de 2 a 29 vidas</li><li>Sem fidelidade com operadora</li><li>Concierge no WhatsApp</li></ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">Planos</p>
+    <h2>Operadoras que a Pertto compara para você</h2>
+    <div class="pme-grid two">
+      <div class="card"><h3>Seguros Unimed</h3><p>O Hospital Materdei atende em todos os planos apresentados. Há opções com internação em todo o Brasil, com reembolso e com e sem coparticipação.</p></div>
+      <div class="card"><h3>Amil</h3><p>A partir do S750 R2, rede com Hospital São Rafael, Aliança e Cardiopulmonar. No Amil Prata, Materdei e Hospital da Bahia pela menor mensalidade.</p></div>
+    </div>
+    <p class="pme-ops">E diversas outras operadoras, conforme o perfil da sua empresa. Rede credenciada, preços, carências e regras são definidos por cada operadora e podem mudar. Antes de você escolher, conferimos a rede atual do plano.</p>
+  </div>
+</section>
+
+<section class="band white">
+  <div class="wrap">
+    <p class="eyebrow">Concierge Pertto</p>
+    <h2>Seu concierge no WhatsApp, antes e depois de contratar</h2>
+    <p class="lead">O plano é da operadora. O atendimento é nosso, direto no WhatsApp, sem fila de telefone.</p>
+    <ul class="lp-conc">
+      <li><div><b>Consultas e exames marcados para você</b><span>Você diz o que precisa e nós marcamos, indicando médicos e unidades da rede credenciada.</span></div></li>
+      <li><div><b>Apoio com liberação e autorização de exames e cirurgias</b><span>Acompanhamos os pedidos junto à operadora, para o procedimento não ficar parado.</span></div></li>
+      <li><div><b>Segunda via do boleto e carteirinha</b><span>Pediu no grupo, a gente resolve.</span></div></li>
+      <li><div><b>Apoio em negativas, demoras e cobranças indevidas</b><span>A operadora negar, demorar ou cobrar errado: nós vamos atrás com você.</span></div></li>
+      <li><div><b>Reajuste acompanhado</b><span>Avisamos antes do aniversário do plano, para você decidir com calma e com os números na mão.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">Como funciona</p>
+    <h2>Da conversa à contratação, em três passos</h2>
+    <ol class="pme-steps">
+      <li><h3>Fale com a Pertto</h3><p>Chame no WhatsApp ou agende uma reunião online, sem compromisso, e conte quem precisa de cobertura.</p></li>
+      <li><h3>Receba a comparação</h3><p>Você recebe as opções com valores reais para as suas vidas, com rede, carência e coparticipação explicadas.</p></li>
+      <li><h3>Envie os documentos</h3><p>Com segurança, via ZapSign. A Pertto cuida da implantação e do suporte para o RH.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band white">
+  <div class="wrap">
+    <p class="eyebrow">Perguntas frequentes</p>
+    <h2>O que as empresas mais perguntam</h2>
+    <div class="faq">
+      <details><summary>A partir de quantas pessoas dá para fazer um plano de saúde pelo CNPJ?</summary><p>A partir de 2 pessoas. O plano é contratado pelo CNPJ da empresa e pode incluir a família. Regras como o tempo de abertura do CNPJ e quem pode entrar como dependente mudam de operadora para operadora, e a Pertto confere tudo antes de você escolher.</p></details>
+      <details><summary>Quanto custa um plano de saúde para empresa em Salvador?</summary><p>O valor depende da idade de cada pessoa, da operadora, da rede e de o plano ter ou não coparticipação. Por isso a Pertto monta a comparação com os valores reais para as suas vidas.</p></details>
+    </div>
+    <p class="pme-ops">As respostas são gerais. Regras, rede e valores variam por plano e por contrato, e o que vale são as condições do contrato assinado.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="lp-final">
+      <h2>Vamos comparar os planos da sua empresa?</h2>
+      <p>Chame a Pertto no WhatsApp e receba a comparação, sem compromisso.</p>
+      <a class="btn" href="https://wa.me/5571936183604?text=Ol%C3%A1!%20Vim%20pelo%20Google%20e%20quero%20comparar%20planos%20de%20sa%C3%BAde%20para%20a%20minha%20empresa." target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="band white">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <p class="eyebrow">Fale com a Pertto</p>
+        <p class="who-name">Guilherme Araújo</p>
+        <p style="color:var(--muted)">Diretor Comercial · Pertto Consultoria em Planos de Saúde</p>
+        <div class="tel"><span id="tel">(71) 93618-3604</span><button class="copy" id="copy" type="button">Copiar número</button></div>
+      </div>
+      <a class="btn pri" href="https://wa.me/5571936183604" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+    <footer>
+      <span>Pertto Consultoria em Planos de Saúde ·</span>
+      <span><b>Menos tempo comparando, mais tempo cuidando.</b></span>
+      <span>CNPJ 70.233.114/0001-67 ·</span>
+      <span>Salvador, Bahia ·</span>
+      <span><a href="/cookies">Política de Cookies</a></span>
+    </footer>
+  </div>
+</section>
+
+<div class="lp-bar"><a class="btn pri" href="https://wa.me/5571936183604?text=Ol%C3%A1!%20Vim%20pelo%20Google%20e%20quero%20comparar%20planos%20de%20sa%C3%BAde%20para%20a%20minha%20empresa." target="_blank" rel="noopener">Falar no WhatsApp</a></div>
+<script>
+(function(){
+  var b=document.getElementById('copy'), t=document.getElementById('tel');
+  b.addEventListener('click',function(){
+    var done=function(){b.textContent='Número copiado';setTimeout(function(){b.textContent='Copiar número'},2000)};
+    var fallback=function(){var r=document.createRange();r.selectNodeContents(t);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selecionado'};
+    try{navigator.clipboard.writeText('(71) 93618-3604').then(done,fallback)}catch(e){fallback()}
+  });
+})();
+</script>
+<script src="/agenda.js" defer></script>
+</body>
+</html>
