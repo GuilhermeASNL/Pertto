@@ -150,6 +150,8 @@ footer a:hover{color:var(--purple-ink)}
 .pme-lead .cta-row{margin-top:24px}
 .pme-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
 .pme-grid h3{font-size:1.1rem}
+.pme-grid.four{grid-template-columns:repeat(4,1fr)}
+.pme-grid.four .card{text-align:center}
 .pme-steps{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:p}
 .pme-steps li{counter-increment:p;background:var(--card);border-radius:18px;padding:22px;min-width:0}
 .pme-steps li::before{content:counter(p);display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--orange);font-family:var(--display);font-weight:800;margin-bottom:10px}
@@ -162,7 +164,8 @@ footer a:hover{color:var(--purple-ink)}
 .faq details[open] summary::after{content:"\2212"}
 .faq p{color:var(--muted);margin:10px 0 0}
 .pme-ops{color:var(--muted);margin-top:14px;max-width:70ch}
-@media (max-width:900px){.pme-grid,.pme-steps{grid-template-columns:1fr}.pme-lead{padding-block:40px 48px}}
+@media (max-width:1100px){.pme-grid.four{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:900px){.pme-grid,.pme-grid.four,.pme-steps{grid-template-columns:1fr}.pme-lead{padding-block:40px 48px}}
 
 .lp-hero{padding-block:36px 44px}
 .lp-hero .eyebrow{color:var(--ink)}
@@ -226,11 +229,11 @@ footer a:hover{color:var(--purple-ink)}
     <p class="eyebrow">Planos</p>
     <h2>Operadoras que a Pertto compara para você</h2>
     <div class="mq" role="region" aria-label="Operadoras comparadas pela Pertto"><ul class="mq-track"><li>Seguros Unimed</li><li>Amil</li><li>Bradesco Saúde</li><li>SulAmérica</li><li>Omint</li><li>Porto Saúde</li><li>Qualicorp</li><li>Promédica</li></ul><ul class="mq-track" aria-hidden="true"><li>Seguros Unimed</li><li>Amil</li><li>Bradesco Saúde</li><li>SulAmérica</li><li>Omint</li><li>Porto Saúde</li><li>Qualicorp</li><li>Promédica</li></ul></div>
-    <div class="pme-grid two">
-      <div class="card"><h3>Seguros Unimed</h3><p>O Hospital Materdei atende em todos os planos apresentados. Há opções com internação em todo o Brasil, com reembolso e com e sem coparticipação.</p></div>
-      <div class="card"><h3>Amil</h3><p>A partir do S750 R2, rede com Hospital São Rafael, Aliança e Cardiopulmonar. No Amil Prata, Materdei e Hospital da Bahia pela menor mensalidade.</p></div>
-      <div class="card"><h3>Bradesco Saúde</h3><p>Efetivo Plus, com atendimento no Hospital da Bahia e no Hospital Materdei. Top Nacional, com atendimento nos hospitais Aliança, São Rafael e Cardiopulmonar.</p></div>
-      <div class="card"><h3>SulAmérica</h3><p>Direto Salvador, com atendimento no Hospital Santa Izabel. Especial 100, com atendimento nos hospitais Aliança, São Rafael e Cardiopulmonar.</p></div>
+    <div class="pme-grid four">
+      <div class="card"><h3>Seguros Unimed</h3><p>O Hospital Materdei atende em todos os planos apresentados.<br>Há opções com internação em todo o Brasil, com reembolso e com e sem coparticipação.</p></div>
+      <div class="card"><h3>Amil</h3><p>A partir do S750 R2, rede com Hospital São Rafael, Aliança e Cardiopulmonar.<br>No Amil Prata, Materdei e Hospital da Bahia pela menor mensalidade.</p></div>
+      <div class="card"><h3>Bradesco Saúde</h3><p>Efetivo Plus, com atendimento no Hospital da Bahia e no Hospital Materdei.<br>Top Nacional, com atendimento nos hospitais Aliança, São Rafael e Cardiopulmonar.</p></div>
+      <div class="card"><h3>SulAmérica</h3><p>Direto Salvador, com atendimento no Hospital Santa Izabel.<br>Especial 100, com atendimento nos hospitais Aliança, São Rafael e Cardiopulmonar.</p></div>
     </div>
     <p class="pme-ops">E diversas outras operadoras, conforme o perfil da sua empresa. Rede credenciada, preços, carências e regras são definidos por cada operadora e podem mudar. Antes de você escolher, conferimos a rede atual do plano.</p>
   </div>
